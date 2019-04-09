@@ -10,7 +10,8 @@ def get_node_object(layer_name):
 class ClientComputedImage(ComputedImage):
     def __init__(self, data_manager, params):
         super().__init__(data_manager, params)
-        self.krita_node = get_node_object(params['layer_name'])
+        if params['layer_name'] not in ['', None, ' ']:
+            self.krita_node = get_node_object(params['layer_name'])
 
     def scan(self):
         # Scan Krita for updates
@@ -18,4 +19,5 @@ class ClientComputedImage(ComputedImage):
 
     def handle_update(self, tile_key, data):
         # Write to krita
-        pass
+        if self.krita_node:
+            self.writekritadatablargg()

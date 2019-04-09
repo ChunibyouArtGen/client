@@ -19,7 +19,7 @@ class ClientLayerImage(LayerImage):
         childNode = getChildNodes(activeDocument)
         imageData = grabImage(childNode, 0, 0, 400, 400)
         imageDataNumpyFormat = get_image_to_numpy(imageData)
-        LayerImage().send_updates(imageDataNumpyFormat)
+        return self.send_updates(imageDataNumpyFormat)
 
     def handle_update(self, tile_key, data):
         # Write to krita
