@@ -1,4 +1,5 @@
 import krita
+from .run_client import start_client
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
@@ -51,3 +52,30 @@ class PythonReferenceDialog(QDialog):
 	def get_all_layers(self):
 		for child in krita.Krita.instance().activeDocument().rootNode().childNodes():
 			yield child.name()
+
+
+class CelestiaPrimeExtension(krita.Extension):
+
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.parent = parent
+        start_client()
+
+
+    def setup(self):
+        pass
+
+    def createActions(self, window):
+        action = window.createAction(
+            'nst', 'Neural Style Transfer Plugin', 'tools/scripts')
+        action.triggered.connect(self.nst_plugin)
+
+    def nst_plugin(self):
+        dlg = PythonReferenceDialog(
+            parent=self.parent.activeWindow(
+
+            ).qwindow())
+        dlg.show()
+        dlg.activateWindow()
+
+

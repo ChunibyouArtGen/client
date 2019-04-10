@@ -4,6 +4,7 @@ from sync import init_logging
 import asyncio
 import websockets
 import logging
+from threading import Thread
 
 logger = logging.getLogger()
 
@@ -33,9 +34,15 @@ async def start():
 
 
 def run_client():
-    asyncio.get_event_loop().run_until_complete(start())
+    asyncio.set_event_loop(asyncio.new_event_loop())
+    asyncio.ensure_future(start())
     asyncio.get_event_loop().run_forever()
 
 
+def start_client():
+    t = Thread(target=run_client, name='celestiaprime')
+    t.start()
+
+
 if __name__ == "__main__":
-    run_client()
+    start_client()

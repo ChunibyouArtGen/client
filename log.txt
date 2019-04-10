@@ -7597,3 +7597,144 @@
 [34mDEBUG:websockets.protocol:client - received ping, sending pong: afd3dce5[0m
 [34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=10, data=b'\xaf\xd3\xdc\xe5', rsv1=False, rsv2=False, rsv3=False)[0m
 [34mDEBUG:client.DataManager:Scanning layer images...[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 0, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 0, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 1, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 1, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 2, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 2, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 3, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 3, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 4, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 4, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 5, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 5, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 6, 'params': {'x0': 0, 'x_count': 10, 'y_count': 10, 'w': 100, 'y0': 0, 'layer_name': 'layer1'}, 'type': 'layer'}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 6, "params": {"x0": 0, "x_count": 10, "y_count": 10, "w": 100, "y0": 0, "layer_name": "layer1"}, "type": "layer"}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 0}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 0}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 1}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 1}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 2}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 2}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 3}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 3}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 4}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 4}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 5}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 5}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 6}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 6}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 7}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 7}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 8}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 8}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'params': {'x0': 0, 'layer_name': 'layer1', 'w': 100, 'x_count': 10, 'y0': 0, 'y_count': 10}, 'type': 'layer', 'uuid': 9}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"params": {"x0": 0, "layer_name": "layer1", "w": 100, "x_count": 10, "y0": 0, "y_count": 10}, "type": "layer", "uuid": 9}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.channel:Listening for updates...[0m
+[34mDEBUG:client.DataManager:Scanning layer images...[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'uuid': 0, 'params': {'y0': 0, 'w': 100, 'x_count': 10, 'x0': 0, 'layer_name': 'layer1', 'y_count': 10}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "uuid": 0, "params": {"y0": 0, "w": 100, "x_count": 10, "x0": 0, "layer_name": "layer1", "y_count": 10}}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'uuid': 1, 'params': {'y0': 0, 'w': 100, 'x_count': 10, 'x0': 0, 'layer_name': 'layer1', 'y_count': 10}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "uuid": 1, "params": {"y0": 0, "w": 100, "x_count": 10, "x0": 0, "layer_name": "layer1", "y_count": 10}}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'uuid': 2, 'params': {'y0': 0, 'w': 100, 'x_count': 10, 'x0': 0, 'layer_name': 'layer1', 'y_count': 10}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "uuid": 2, "params": {"y0": 0, "w": 100, "x_count": 10, "x0": 0, "layer_name": "layer1", "y_count": 10}}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'w': 100, 'layer_name': 'layer1', 'y0': 0, 'x_count': 10, 'x0': 0, 'y_count': 10}, 'uuid': 0}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"w": 100, "layer_name": "layer1", "y0": 0, "x_count": 10, "x0": 0, "y_count": 10}, "uuid": 0}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'w': 100, 'layer_name': 'layer1', 'y0': 0, 'x_count': 10, 'x0': 0, 'y_count': 10}, 'uuid': 1}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"w": 100, "layer_name": "layer1", "y0": 0, "x_count": 10, "x0": 0, "y_count": 10}, "uuid": 1}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'w': 100, 'layer_name': 'layer1', 'y0': 0, 'x_count': 10, 'x0': 0, 'y_count': 10}, 'uuid': 2}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"w": 100, "layer_name": "layer1", "y0": 0, "x_count": 10, "x0": 0, "y_count": 10}, "uuid": 2}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'x0': 0, 'y0': 0, 'x_count': 10, 'layer_name': 'layer1', 'w': 100, 'y_count': 10}, 'uuid': 0}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"x0": 0, "y0": 0, "x_count": 10, "layer_name": "layer1", "w": 100, "y_count": 10}, "uuid": 0}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'x0': 0, 'y0': 0, 'x_count': 10, 'layer_name': 'layer1', 'w': 100, 'y_count': 10}, 'uuid': 1}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"x0": 0, "y0": 0, "x_count": 10, "layer_name": "layer1", "w": 100, "y_count": 10}, "uuid": 1}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'x0': 0, 'y0': 0, 'x_count': 10, 'layer_name': 'layer1', 'w': 100, 'y_count': 10}, 'uuid': 2}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"x0": 0, "y0": 0, "x_count": 10, "layer_name": "layer1", "w": 100, "y_count": 10}, "uuid": 2}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'type': 'layer', 'params': {'x0': 0, 'y0': 0, 'x_count': 10, 'layer_name': 'layer1', 'w': 100, 'y_count': 10}, 'uuid': 3}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"data": {"type": "layer", "params": {"x0": 0, "y0": 0, "x_count": 10, "layer_name": "layer1", "w": 100, "y_count": 10}, "uuid": 3}, "request": "RegisterImage"}', rsv1=False, rsv2=False, rsv3=False)[0m
+[34mDEBUG:websockets.protocol:client - state = CONNECTING[0m
+[34mDEBUG:websockets.protocol:client - event = connection_made(<_SelectorSocketTransport fd=9 read=idle write=<idle, bufsize=0>>)[0m
+[34mDEBUG:websockets.protocol:client - state = OPEN[0m
+[34mDEBUG:root:Client init complete[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 0, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 0, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 1, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 1, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 2, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 2, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 3, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 3, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 4, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 4, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 5, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 5, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 6, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 6, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 7, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 7, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 8, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 8, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.data_manager:Updating remote about new image {'uuid': 9, 'type': 'layer', 'params': {'layer_name': 'layer1', 'y_count': 10, 'w': 100, 'x0': 0, 'x_count': 10, 'y0': 0}}...[0m
+[32mINFO:sync.channel:Sending message RegisterImage[0m
+[34mDEBUG:websockets.protocol:client > Frame(fin=True, opcode=1, data=b'{"request": "RegisterImage", "data": {"uuid": 9, "type": "layer", "params": {"layer_name": "layer1", "y_count": 10, "w": 100, "x0": 0, "x_count": 10, "y0": 0}}}', rsv1=False, rsv2=False, rsv3=False)[0m
+[32mINFO:sync.channel:Listening for updates...[0m
+[34mDEBUG:client.DataManager:Scanning layer images...[0m
+[34mDEBUG:client.DataManager:Scanning layer images...[0m
+[34mDEBUG:client.DataManager:Scanning layer images...[0m
