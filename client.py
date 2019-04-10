@@ -19,7 +19,12 @@ async def start():
             'type': 'layer',
             'uuid': i,
             'params': {
-                'layer_name': 'layer1'
+                'layer_name': 'layer1',
+                'x0': 0,
+                'y0': 0,
+                'x_count': 10,
+                'y_count': 10,
+                'w': 100
             }
         })
         await asyncio.sleep(1)
