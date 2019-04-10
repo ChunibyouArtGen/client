@@ -1,4 +1,4 @@
-from client.DataManager import ClientDataManager
+from .client.DataManager import ClientDataManager
 from sync import init_logging
 
 import asyncio
