@@ -7,10 +7,9 @@ import logging
 
 logger = logging.getLogger()
 
-init_logging()
-
 
 async def start():
+    init_logging()
     ws = await websockets.connect("ws://localhost:8765")
     data_manager = ClientDataManager(ws)
     logger.debug("Client init complete")
