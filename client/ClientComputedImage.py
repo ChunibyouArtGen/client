@@ -1,10 +1,6 @@
 from sync.images import ComputedImage
 from sync.images import register_image_class
-
-
-def get_node_object(layer_name):
-    pass
-
+from .utils import get_node_object
 
 @register_image_class
 class ClientComputedImage(ComputedImage):

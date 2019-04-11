@@ -1,25 +1,22 @@
 from sync.images import LayerImage
 from sync.images import register_image_class
-from .utils import *
-
-def get_node_object(layer_name):
-    pass
-
+from .utils import get_node_object, grab_image
+import logging
+logger = logging.getLogger(__name__)
 
 @register_image_class
 class ClientLayerImage(LayerImage):
     def __init__(self, data_manager, params):
         super().__init__(data_manager, params)
-        self.krita_node = get_node_object(params['layer_name'])
 
     def scan(self):
+        logger.debug("Scanning image on layer {}".format(self.params['layer_name']))
         # Scan Krita for updates
+        self.krita_node = get_node_object(self.params['layer_name'])
 
-        activeDocument = getActiveDocument()
-        childNode = getChildNodes(activeDocument)
-        imageData = grabImage(childNode, 0, 0, 400, 400)
-        imageDataNumpyFormat = get_image_to_numpy(imageData)
-        return self.send_updates(imageDataNumpyFormat)
+        new_data = grab_image(self.krita_node, self.params['x0'], self.params['y0'], self.params['x_count']*self.params['w'], self.params['y_count']*self.params['w'])
+        
+        return self.update_data(new_data)
 
     def handle_update(self, tile_key, data):
         # Write to krita
