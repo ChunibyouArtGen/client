@@ -6,30 +6,12 @@ logger = logging.getLogger(__name__)
 
 try:
     import krita
-    from krita import *
+    from krita import QByteArray
 except:
     logger.warn("Failed to load krita")
 
 
-def getActiveDocument():
-    """
-    Get the Active Krita Document
-    """
-    document = Krita.activeDocument()
-    node = document.rootNode()
-    return node
-
-
-def getChildNodes(node):
-    """
-    Get a List of Nodes of document (e.g Vector Layer, Fill Layer, Mask Layer)
-    """
-    children = node.childNodes()
-    firstChild = children[0]
-    return firstChild
-
-
-def grabImage(node, x, y, w, h):
+def grab_image(node, x, y, w, h):
     """
     Grab the image from Krita Layer, given coordinates
     Parameters
@@ -39,19 +21,15 @@ def grabImage(node, x, y, w, h):
     h	number of rows to read
     """
     imageData = node.pixelData(x, y, w, h)
-    return imageData
+    data = np.frombuffer(imageData, dtype=np.ubyte)
+    new_data = data.reshape((4, w,h))
+    return new_data[:3,:,:]
 
 
 def getColorModel(node):
     return node.colorModel()
 
 
-def get_image_to_numpy(imageData):
-    """
-    convert image to Numpy Array
-    """
-    raw_image = base64.decodebytes(imageData.toBase64())
-    return np.frombuffer(raw_image, dtype=np.float64)
 
 
 def get_numpy_to_image(numpyImage):
@@ -74,3 +52,13 @@ def set_layer_data(node, imageData, x, y, w, h):
     h	the number of rows to write
     """
     return node.setPixelData(imageData, x, y, w, h)
+
+
+def get_node_object(layer_name):
+    document = Krita.activeDocument()
+    node = document.rootNode()
+    for node in node.childNodes():
+        if node.name() == layer_name:
+            return node
+    
+    return None
