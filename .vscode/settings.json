@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/bin/python3.5",
+    "python.pythonPath": "C:\\Users\\sumee\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
     "python.formatting.provider": "yapf"
 }
