@@ -3,10 +3,10 @@ from sync.client import ClientComputedImage, ClientLayerImage, Client
 
 
 class ClientExtension(krita.Extension):
-    def __init__(self, parent):
+    def __init__(self, parent, client):
         super().__init__(parent)
         self.parent = parent
-        self.client = Client.get_client()
+        self.client = client
 
     def setup(self):
         pass
@@ -36,6 +36,7 @@ class ClientExtension(krita.Extension):
                 "y_count": 10,
                 "w": 100,
             })
+        self.client.run_coroutine(content.register())
         print(self.data_manager)
         print(self.data_manager.images)
         print("Done! Images should auto-sync now")
