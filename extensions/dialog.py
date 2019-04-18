@@ -1,9 +1,7 @@
 import krita
-from .run_client import start_client
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
-from .client import get_data_manager, ClientComputedImage, ClientLayerImage
 
 
 class PythonReferenceDialog(QDialog):

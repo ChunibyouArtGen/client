@@ -1,6 +1,6 @@
 from .dialog import PythonReferenceDialog
-from sync.client import ClientComputedImage, ClientLayerImage, Client
-
+import krita
+from sync.client import ClientLayerImage, ClientComputedImage
 
 class ClientExtension(krita.Extension):
     def __init__(self, parent, client):
@@ -28,7 +28,7 @@ class ClientExtension(krita.Extension):
     def demo(self):
         print("Setting up images...")
         content = ClientLayerImage(
-            self.data_manager, {
+            self.client.data_manager, {
                 "layer_name": "content",
                 "x0": 0,
                 "y0": 0,
@@ -36,7 +36,16 @@ class ClientExtension(krita.Extension):
                 "y_count": 10,
                 "w": 100,
             })
-        self.client.run_coroutine(content.register())
-        print(self.data_manager)
-        print(self.data_manager.images)
+        content = ClientLayerImage(
+            self.client.data_manager, {
+                "layer_name": "content",
+                "x0": 100,
+                "y0": 1000,
+                "x_count": 10,
+                "y_count": 10,
+                "w": 200
+            })
+        self.client.run_coroutine(content.register_self())
+        print(self.client.data_manager)
+        print(self.client.data_manager.images)
         print("Done! Images should auto-sync now")
