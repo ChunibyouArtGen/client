@@ -32,13 +32,13 @@ class ClientExtension(krita.Extension):
                 "layer_name": "content",
                 "x0": 0,
                 "y0": 0,
-                "x_count": 10,
+                "x_count": 5,
                 "y_count": 10,
                 "w": 100,
             })
-        content = ClientLayerImage(
+        style = ClientLayerImage(
             self.client.data_manager, {
-                "layer_name": "content",
+                "layer_name": "style",
                 "x0": 100,
                 "y0": 1000,
                 "x_count": 10,
