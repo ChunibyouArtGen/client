@@ -32,20 +32,36 @@ class ClientExtension(krita.Extension):
                 "layer_name": "content",
                 "x0": 0,
                 "y0": 0,
-                "x_count": 5,
-                "y_count": 10,
+                "x_count": 2,
+                "y_count": 2,
                 "w": 100,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
                 "layer_name": "style",
-                "x0": 100,
+                "x0": 1000,
                 "y0": 1000,
-                "x_count": 10,
-                "y_count": 10,
-                "w": 200
+                "x_count": 2,
+                "y_count": 2,
+                "w": 100
+            })
+        comp = ClientComputedImage(
+            self.client.data_manager, {
+                "layer_name": "output",
+                "x0": 2000,
+                "y0": 2000,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 100,
+                "model_id": "nst",
+                "inputs": {
+                    "content": content,
+                    "style": style
+                }
             })
         self.client.run_coroutine(content.register_self())
-        print(self.client.data_manager)
+        self.client.run_coroutine(style.register_self())
+        self.client.run_coroutine(comp.register_self())
+
         print(self.client.data_manager.images)
         print("Done! Images should auto-sync now")
