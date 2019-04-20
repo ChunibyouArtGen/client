@@ -1,6 +1,8 @@
 from .dialog import PythonReferenceDialog
 import krita
-from sync.client import ClientLayerImage, ClientComputedImage
+from sync.client import ClientComputedImage, ClientLayerImage
+from krita import QByteArray
+# from sync.client import ClientLayerImage, ClientComputedImage, utils
 
 class ClientExtension(krita.Extension):
     def __init__(self, parent, client):
@@ -21,7 +23,7 @@ class ClientExtension(krita.Extension):
 
     def nst_plugin(self):
         dlg = PythonReferenceDialog(
-            parent=self.parent.activeWindow().qwindow())
+            parent=self.parent.activeWindow().qwindow(), client=self.client)
         dlg.show()
         dlg.activateWindow()
 
