@@ -28,7 +28,7 @@ class PythonReferenceDialog(QDialog):
         selector_widget.setLayout(selector_layout)
         outer_layout.addWidget(selector_widget)
         q = QPushButton("Run", self)
-        q.clicked.connect(lambda:self.demo(content_layer.currentText(), style_layer.currentText(), output_layer.currentText()))
+        q.clicked.connect(lambda:self.compute(content_layer.currentText(), style_layer.currentText(), output_layer.currentText()))
         outer_layout.addWidget(q)
 
         self.setLayout(outer_layout)
@@ -55,7 +55,7 @@ class PythonReferenceDialog(QDialog):
         ).childNodes():
             yield child.name()
 
-    def demo(self, content_layer, style_layer, output_layer):
+    def compute(self, content_layer, style_layer, output_layer):
         print("Setting up images...")
         print("Printing Selector values")
         content_node = utils.get_node_object("content")
@@ -66,21 +66,37 @@ class PythonReferenceDialog(QDialog):
                 "layer_name": str(content_layer),
                 "x0": 0,
                 "y0": 0,
-                "x_count": 5,
-                "y_count": 10,
-                "w": 100,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 500,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
                 "layer_name": str(style_layer),
                 "x0": 100,
-                "y0": 1000,
-                "x_count": 10,
-                "y_count": 10,
-                "w": 200
+                "y0": 100,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 500
             })
+        comp = ClientComputedImage(
+            self.client.data_manager, {
+                "layer_name": str(output_layer),
+                "x0": 0,
+                "y0": 0,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 500,
+                "model_id": "nst",
+                "inputs": {
+                    "content": content,
+                    "style": style
+                }
+            })
+
         self.client.run_coroutine(content.register_self())
-        print(self.client.data_manager)
+        self.client.run_coroutine(style.register_self())
+        self.client.run_coroutine(comp.register_self())
         print(self.client.data_manager.images)
         print("Done! Images should auto-sync now")
         

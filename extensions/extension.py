@@ -36,7 +36,7 @@ class ClientExtension(krita.Extension):
                 "y0": 0,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 100,
+                "w": 500,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
@@ -50,12 +50,12 @@ class ClientExtension(krita.Extension):
         comp = ClientComputedImage(
             self.client.data_manager, {
                 "layer_name": "output",
-                "x0": 2000,
-                "y0": 2000,
+                "x0": 0,
+                "y0": 0,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 100,
-                "model_id": "nst",
+                "w": 500,
+                "model_key": "nst",
                 "inputs": {
                     "content": content,
                     "style": style
