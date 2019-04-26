@@ -29,6 +29,9 @@ class ClientExtension(krita.Extension):
 
         action = window.createAction('adain', 'AdaIN', 'tools/scripts/demo')
         action.triggered.connect(self.demo_adain)
+        
+        action = window.createAction('unstuck', 'Unstuck', 'tools/scripts')
+        action.triggered.connect(self.unstuck)
 
     def adain_ui(self):
         dlg = PythonReferenceDialog(
@@ -36,6 +39,11 @@ class ClientExtension(krita.Extension):
         dlg.show()
         dlg.activateWindow()
 
+    def unstuck(self):
+        for child in krita.Krita.instance().activeDocument().rootNode(
+        ).childNodes():
+            child.visible(True)
+        
     def fnst_ui(self):
         dlg = FNSTDialog(
             parent=self.parent.activeWindow().qwindow(), client=self.client)
