@@ -89,7 +89,7 @@ class FNSTDialog(QDialog):
                 "y0": 0,
                 "x_count": 4,
                 "y_count": 4,
-                "w": 200,
+                "w": 900,
             })
         
         comp = ClientComputedImage(
@@ -99,7 +99,7 @@ class FNSTDialog(QDialog):
                 "y0": 800,
                 "x_count": 4,
                 "y_count": 4,
-                "w": 200,
+                "w": 900,
                 "model_key": "fastnst",
                 "inputs": {
                     "content": content,

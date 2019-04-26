@@ -73,7 +73,7 @@ class PythonReferenceDialog(QDialog):
                 "y0": 0,
                 "x_count": 4,
                 "y_count": 4,
-                "w": 200,
+                "w": 400,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
@@ -89,11 +89,11 @@ class PythonReferenceDialog(QDialog):
             self.client.data_manager, {
                 "layer_name": str(output_layer),
                 "x0": 0,
-                "y0": 800,
+                "y0": 0,
                 "x_count": 4,
                 "y_count": 4,
-                "w": 200,
-                "model_id": "adain",
+                "w": 400,
+                "model_key": "adain",
                 "inputs": {
                     "content": content,
                     "style": style
