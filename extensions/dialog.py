@@ -71,28 +71,28 @@ class PythonReferenceDialog(QDialog):
                 "layer_name": str(content_layer),
                 "x0": 0,
                 "y0": 0,
-                "x_count": 4,
-                "y_count": 4,
-                "w": 400,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 250,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
                 "layer_name": str(style_layer),
-                "x0": 100,
-                "y0": 100,
+                "x0": 0,
+                "y0": 0,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 500
+                "w": 250
             })
         
         comp = ClientComputedImage(
             self.client.data_manager, {
                 "layer_name": str(output_layer),
-                "x0": 0,
+                "x0": 600,
                 "y0": 0,
-                "x_count": 4,
-                "y_count": 4,
-                "w": 400,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 250,
                 "model_key": "adain",
                 "inputs": {
                     "content": content,

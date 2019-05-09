@@ -57,9 +57,9 @@ class ClientExtension(krita.Extension):
                 "layer_name": "content",
                 "x0": 0,
                 "y0": 0,
-                "x_count": 4,
-                "y_count": 4,
-                "w": 900,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 250,
             })
         style = ClientLayerImage(
             self.client.data_manager, {
@@ -68,16 +68,16 @@ class ClientExtension(krita.Extension):
                 "y0": 0,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 300
+                "w": 250
             })
         comp = ClientComputedImage(
             self.client.data_manager, {
                 "layer_name": "output",
-                "x0": 0,
-                "y0": 0,
-                "x_count": 4,
-                "y_count": 4,
-                "w": 900,
+                "x0": 600,
+                "y0": 600,
+                "x_count": 2,
+                "y_count": 2,
+                "w": 250,
                 "model_key": "adain",
                 "inputs": {
                     "content": content,
@@ -101,7 +101,7 @@ class ClientExtension(krita.Extension):
                 "y0": 0,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 500,
+                "w": 250,
             })
         comp = ClientComputedImage(
             self.client.data_manager, {
@@ -110,7 +110,7 @@ class ClientExtension(krita.Extension):
                 "y0": 500,
                 "x_count": 2,
                 "y_count": 2,
-                "w": 500,
+                "w": 250,
                 "model_key": "fastnst",
                 "inputs": {
                     "content": content,
